@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the script with an input audio file:
+Run the script with an input audio file (tested to work for mp3 and wav, other file formats may not be recognized):
 
 ```bash
 python main.py path/to/audio/file.wav
@@ -32,8 +32,8 @@ The script will:
 
 1. Create a 'processed' subdirectory where the input file is located. I've included a media folder with an example test file.
 2. Process the file using both methods:
-   - Silero VAD: `{filename}_silero.wav`
-   - FFmpeg: `{filename}_ffmpeg.wav`
+   - Silero VAD: `{filename}_SileroVAD.wav`
+   - FFmpeg: `{filename}_FFmpeg.wav`
 3. Display processing statistics
 
 ## Processing Methods
