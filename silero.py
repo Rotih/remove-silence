@@ -10,7 +10,7 @@ from helpers import get_duration
 
 
 class SileroVADProcessor:
-    def __init__(self, pad_duration=0.5, min_speech_duration=0.5):
+    def __init__(self, pad_duration=0.7, min_speech_duration=0.5):
         self.model, utils = torch.hub.load(
             repo_or_dir="snakers4/silero-vad", model="silero_vad"
         )
@@ -57,6 +57,7 @@ class SileroVADProcessor:
                 self.model,
                 sampling_rate=self.sampling_rate,
                 window_size_samples=512,
+                threshold=0.15 
             )
 
             # check for empty timestamps, return 1 second file
